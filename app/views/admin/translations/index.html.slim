@@ -1,0 +1,11 @@
+h1 Translations
+
+= link_to 'create new', new_admin_translation_path, class: ['btn', 'btn-default']
+.translations_list
+  table.table
+    thead
+      tr
+        th translation name
+    - @translations.each do |translation|
+      tr
+        td = link_to translation.name, admin_translation_path(translation)

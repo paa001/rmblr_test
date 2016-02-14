@@ -1,0 +1,10 @@
+h2
+  | Traslation - 
+  = @translation.name
+
+= form_for [:admin, @translation, TranslationMessage.new] do |f| 
+  = f.label  :name, 'message'
+  = f.text_field :body
+  = f.submit 'post'
+ul
+  = render partial: 'shared/translation_message_line', collection: @translation.translation_messages.with_users, as: :message

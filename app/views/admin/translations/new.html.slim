@@ -1,0 +1,6 @@
+h2 Create new translation
+
+= form_for [:admin, @translation] do |f| 
+  = f.label  :name, 'name'
+  = f.text_field :name
+  = f.submit 'Create'

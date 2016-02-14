@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title
+      | RamblerTestAdmin
+    = stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    = render partial: 'navbar'
+    .content
+      = yield
+  = javascript_include_tag 'admin', 'data-turbolinks-track' => true

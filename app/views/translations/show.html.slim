@@ -1,0 +1,3 @@
+h2 = @translation.name
+ul#translation_messages data-translation-id="#{@translation.id}"
+  = render partial: 'shared/translation_message_line', collection: @translation.translation_messages.with_users, as: :message

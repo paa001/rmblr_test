@@ -1,0 +1,10 @@
+h1 Translations
+
+.translations_list
+  table.table
+    thead
+      tr
+        th translation name
+    - @translations.each do |translation|
+      tr
+        td = link_to translation.name, translation_path(translation)
